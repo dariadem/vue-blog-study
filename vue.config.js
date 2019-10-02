@@ -1,4 +1,8 @@
 module.exports = {
+	publicPath: process.env.NODE_ENV === 'production'
+		? '/vue-blog-study/'
+		: '/',
+	
 	chainWebpack: config => {
 		config.module
 			.rule("vue")
